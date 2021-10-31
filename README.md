@@ -4,7 +4,6 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 
 ## List of tablets Backported:
 
-- [ ] [AcePen AP1060](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1495)
 - [x] Artisul M0610
 - [ ] [Gaomon S630](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1458) (non-WinUSB)
 - [x] Gaomon M10K Pro
@@ -12,7 +11,7 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [x] Gaomon PD1661
 - [x] Gaomon S56K (Second identifier) 
 - [ ] All Huion Tablet (Change parser from `OpenTabletDriver.Tablet.TabletReportParser` to `OpenTabletDriver.Vendors.UCLogic.UCLogicReportParser`)
-- [ ] Huion 420X (+ [second 100 PID identifier](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1459))
+- [ ] Huion H420X (+ [second 100 PID identifier](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1459))
 - [ ] [Huion H640P](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1034) (change parser to `OpenTabletDriver.Vendors.UCLogic.UCLogicReportParser` & End ReportID to 128)
 - [ ] [Huion HS64](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1364) (Second identifier)
 - [ ] [Huion Kamvas 13](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1453) (Device String change)
@@ -41,7 +40,7 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [ ] [Wacom Intuos 1 & 2](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1119) (Change any GD & XD series's FeatureInitReport tp `BAA=`)
 - [ ] [Wacom PTH-451](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1107) (change parser in non-aux identifier from `OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser` to `OpenTabletDriver.Vendors.Wacom.WacomDriverIntuosV2ReportParser`)
 - [ ] [Wacom PTK-x40](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064) (change parsers for any PTK-x40 tablet to `OTD.Backport.Vendors.Intuos4.Intuos4ReportParser`)
-- [ ] [Woodpad PF0730](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450)
+- [x] [Woodpad PF0730](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450)
 - [ ] XenceLabs PenTablet Medium
 - [ ] [XP-Pen Artist 12](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1416)
 - [ ] XP-Pen Artist 15.6 Pro
@@ -60,9 +59,8 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 ## List of parsers Backported:
 
 - [x] VeikkReportParser (VeikkTabletReport)
-- [ ] [AcepenReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1495) (AcepenAuxReport & AcepenTabletReport)
 - [x] [WacomGraphire3ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1487) (IntuosLegacyTabletReport) ()
-- [ ] [WoodPadParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450) (WoodPadReport) (Woodpad PF0730)
+- [x] [WoodPadParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450) (WoodPadReport) (Woodpad PF0730)
 - [ ] [XP_PenReportParserOverride](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1420) (XP_PenTabletOverflowReport) (XP-Pen Innovator 16)
 - [ ] [Intuos4ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064)
 (Intuos4AuxReport) (All PTK-X40 use it)

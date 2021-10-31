@@ -1,0 +1,31 @@
+{
+    "Name": "ViewSonic WoodPad PF3730",
+    "DigitizerIdentifiers": [
+      {
+        "Width": 168.0,
+        "Height": 106.4,
+        "MaxX": 16800.0,
+        "MaxY": 10640.0,
+        "MaxPressure": 8191,
+        "ActiveReportID": {
+          "Start": null,
+          "StartInclusive": false,
+          "End": null,
+          "EndInclusive": false
+        },
+        "VendorID": 1347,
+        "ProductID": 58983,
+        "InputReportLength": 14,
+        "OutputReportLength": null,
+        "ReportParser": "OTD.Backport.Vendors.ViewSonic.WoodPadParser",
+        "FeatureInitReport": "AhABAAA=",
+        "OutputInitReport": null,
+        "DeviceStrings": {},
+        "InitializationStrings": []
+      }
+    ],
+    "AuxilaryDeviceIdentifiers": [],
+    "Attributes": {
+      "libinputoverride": "1"
+    }
+  }
