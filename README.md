@@ -29,7 +29,7 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [ ] UGEETABLET M708
 - [x] Veikk S640 V2
 - [x] Veikk VK640
-- [ ] [Wacom CTE 430](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1487)
+- [x] [Wacom CTE 430](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1487)
 - [x] Wacom CTE 630
 - [ ] Wacom CTH 461 (Parser change from `OpenTabletDriver.Tablet.AuxReportParser` to `OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser`)
 - [x] Wacom CTH 461
@@ -61,8 +61,8 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 
 - [x] VeikkReportParser (VeikkTabletReport)
 - [ ] [AcepenReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1495) (AcepenAuxReport & AcepenTabletReport)
-- [ ] [IntuosLegacyReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1487) (IntuosLegacyTabletReport)
-- [ ] [WoodPadParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450) (WoodPadReport)
-- [ ] [XP_PenReportParserOverride](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1420) (XP_PenTabletOverflowReport)
+- [x] [WacomGraphire3ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1487) (IntuosLegacyTabletReport) ()
+- [ ] [WoodPadParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450) (WoodPadReport) (Woodpad PF0730)
+- [ ] [XP_PenReportParserOverride](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1420) (XP_PenTabletOverflowReport) (XP-Pen Innovator 16)
 - [ ] [Intuos4ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064)
 (Intuos4AuxReport) (All PTK-X40 use it)
