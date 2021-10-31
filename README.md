@@ -11,13 +11,13 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [x] Gaomon M1220
 - [x] Gaomon PD1661
 - [x] Gaomon S56K (Second identifier) 
-- [ ] All Huion Tablet (Change parser for any identifier that has `OpenTabletDriver.Tablet.TabletReportParser` to `OpenTabletDriver.Vendors.UCLogic.UCLogicReportParser`)
+- [ ] All Huion Tablet (Change parser from `OpenTabletDriver.Tablet.TabletReportParser` to `OpenTabletDriver.Vendors.UCLogic.UCLogicReportParser`)
 - [ ] Huion 420X (+ [second 100 PID identifier](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1459))
 - [ ] [Huion H640P](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1034) (change parser to `OpenTabletDriver.Vendors.UCLogic.UCLogicReportParser` & End ReportID to 128)
 - [ ] [Huion HS64](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1364) (Second identifier)
 - [ ] [Huion Kamvas 13](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1453) (Device String change)
 - [ ] [Huion Kamvas 22 Plus](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1340)
-- [ ] [Huion Q620M](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1116) (change parser from `OpenTabletDriver.Tablet.TabletReportParser` to `OpenTabletDriver.Vendors.Huion.GianoReportParser`)
+- [ ] [Huion Q620M](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1116) (change parser to `OpenTabletDriver.Vendors.Huion.GianoReportParser`)
 - [ ] [Huion Q11K](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1161) (Missing identifier + Wrong device string)
 - [ ] [Huion WH1409](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1576) 
 - [ ] Parblo Intangabo M
