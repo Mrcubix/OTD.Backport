@@ -2,7 +2,7 @@
 
 This Plugin aim to backport Parsers and Configurations that are known working in 0.5.3.3
 
-## List of tablets Backported:
+## List of tablets Backported (36/50):
 
 - [x] Artisul M0610
 - [x] [Gaomon S630](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1458) (non-WinUSB)
@@ -19,13 +19,12 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [x] [Huion Q620M](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1116) (change parser to `OpenTabletDriver.Vendors.Huion.GianoReportParser`)
 - [x] [Huion Q11K](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1161) (Missing identifier + Wrong device string)
 - [x] [Huion WH1409](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1576) 
-- [ ] Parblo Intangabo M
-- [ ] Parblo Intangabo S
-- [ ] Parblo Ninos M
-- [ ] Parblo Ninos S
-- [ ] UC-Logic 1060N
-- [ ] UC-Logic PF1209
-- [ ] UGEETABLET M708
+- [x] Parblo Intangabo M
+- [x] Parblo Intangabo S
+- [x] Parblo Ninos M
+- [x] Parblo Ninos S
+- [x] UC-Logic 1060N
+- [x] UGEETABLET M708
 - [x] Veikk S640 V2
 - [x] Veikk VK640
 - [x] [Wacom CTE 430](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1487)
@@ -33,12 +32,12 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [x] [Wacom CTH 460](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1307) (Change aux Parser to `OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser`)
 - [x] Wacom CTH 461
 - [x] Wacom CTH 661
-- [ ] [Wacom CTH 671](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1089) (Fix size)
-- [ ] [Wacom CTL 6100WL](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1306) (Missing FeatureInitReport)
+- [x] [Wacom CTH 671](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1089) (Fix size)
+- [x] [Wacom CTL 6100WL](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1306) (Missing FeatureInitReport)
 - [x] Wacom ET-0405A-U
 - [x] Wacom ET-0405-U
-- [ ] [Wacom Intuos 1 & 2](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1119) (Change any GD & XD series's FeatureInitReport to `BAA=`)
-- [ ] [Wacom PTH-451](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1107) (change parser in non-aux identifier from `OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser` to `OpenTabletDriver.Vendors.Wacom.WacomDriverIntuosV2ReportParser`)
+- [x] [Wacom Intuos 1 & 2](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1119) (Change any GD & XD series's FeatureInitReport to `BAA=`)
+- [x] [Wacom PTH-451](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1107) (change parser in non-aux identifier from `OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser` to `OpenTabletDriver.Vendors.Wacom.WacomDriverIntuosV2ReportParser`)
 - [ ] [Wacom PTK-x40](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064) (change parsers for any PTK-x40 tablet to `OTD.Backport.Vendors.Intuos4.Intuos4ReportParser`)
 - [x] [Woodpad PF0730](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450)
 - [ ] XenceLabs PenTablet Medium
