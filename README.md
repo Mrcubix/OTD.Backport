@@ -35,7 +35,7 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [x] Wacom CTH 461
 - [x] Wacom CTH 661
 - [ ] [Wacom CTH 671](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1089) (Fix size)
-- [ ] [Wacom CTL 6100WL]https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1306) (Missing FeatureInitReport)
+- [ ] [Wacom CTL 6100WL](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1306) (Missing FeatureInitReport)
 - [x] Wacom ET-0405A-U
 - [x] Wacom ET-0405-U
 - [ ] [Wacom Intuos 1 & 2](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1119) (Change any GD & XD series's FeatureInitReport tp `BAA=`)
