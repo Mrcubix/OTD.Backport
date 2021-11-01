@@ -38,9 +38,9 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [x] Wacom ET-0405-U
 - [x] [Wacom Intuos 1 & 2](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1119) (Change any GD & XD series's FeatureInitReport to `BAA=`)
 - [x] [Wacom PTH-451](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1107) (change parser in non-aux identifier from `OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser` to `OpenTabletDriver.Vendors.Wacom.WacomDriverIntuosV2ReportParser`)
-- [ ] [Wacom PTK-x40](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064) (change parsers for any PTK-x40 tablet to `OTD.Backport.Vendors.Intuos4.Intuos4ReportParser`)
+- [x] [Wacom PTK-x40](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064) (change parsers for any PTK-x40 tablet to `OTD.Backport.Vendors.Intuos4.Intuos4ReportParser`)
 - [x] [Woodpad PF0730](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450)
-- [ ] [XenceLabs PenTablet Medium](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1542)
+- [x] [XenceLabs PenTablet Medium](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1542)
 - [x] [XP-Pen Artist 12](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1416)
 - [x] XP-Pen Artist 15.6 Pro
 - [x] XP-Pen Deco 01 V2 (Should be 100 lines per mm)
@@ -61,9 +61,9 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [x] [WacomGraphire3ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1487) (IntuosLegacyTabletReport) (CTE-430)
 - [x] [WoodPadParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450) (WoodPadReport) (Woodpad PF0730)
 - [x] [XP_PenReportParserOverride](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1420) (XP_PenTabletOverflowReport) (XP-Pen Innovator 16)
-- [ ] [Intuos4ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064)
+- [x] [Intuos4ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064)
 (Intuos4AuxReport) (All PTK-X40 use it)
-- [ ] [XenceLabsReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1542) (XenceLabsTabletReport)
+- [x] [XenceLabsReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1542) (XenceLabsTabletReport)
 
 # Note:
 

@@ -1,4 +1,3 @@
-using System.Collections.Specialized;
 using OpenTabletDriver.Plugin.Tablet;
 
 namespace OTD.Backport.Vendors.XP_Pen
