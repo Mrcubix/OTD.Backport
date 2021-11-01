@@ -2,7 +2,7 @@
 
 This Plugin aim to backport Parsers and Configurations that are known working in 0.5.3.3
 
-## List of tablets Backported (36/50):
+## List of Tablet Configurations Changes Backported (48/50):
 
 - [x] Artisul M0610
 - [x] [Gaomon S630](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1458) (non-WinUSB)
@@ -40,29 +40,30 @@ This Plugin aim to backport Parsers and Configurations that are known working in
 - [x] [Wacom PTH-451](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1107) (change parser in non-aux identifier from `OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser` to `OpenTabletDriver.Vendors.Wacom.WacomDriverIntuosV2ReportParser`)
 - [ ] [Wacom PTK-x40](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064) (change parsers for any PTK-x40 tablet to `OTD.Backport.Vendors.Intuos4.Intuos4ReportParser`)
 - [x] [Woodpad PF0730](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450)
-- [ ] XenceLabs PenTablet Medium
-- [ ] [XP-Pen Artist 12](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1416)
-- [ ] XP-Pen Artist 15.6 Pro
-- [ ] XP-Pen Deco 01 V2 (Should be 100 lines per mm)
-- [ ] [XP-Pen Deco 03](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1365) (Missing identifier)
-- [ ] XP-Pen Deco Fun CT430
-- [ ] XP-Pen Deco Fun CT640
-- [ ] [XP-Pen Deco Fun CT1060](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1474/files)
-- [ ] [XP-Pen Deco Mini 4](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1373)
-- [ ] [XP-Pen Innovator 16](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1420)
-- [ ] [XP-Pen Star 03](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1365) (Missing identifier)
-- [ ] [XP-Pen Star 06](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1038) (Missing parser, change it to `OpenTabletDriver.Vendors.XP_Pen.XP_PenReportParser`)
-- [ ] XP-Pen Star G430S V2
-- [ ] XP-Pen Star G960S
+- [ ] [XenceLabs PenTablet Medium](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1542)
+- [x] [XP-Pen Artist 12](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1416)
+- [x] XP-Pen Artist 15.6 Pro
+- [x] XP-Pen Deco 01 V2 (Should be 100 lines per mm)
+- [x] [XP-Pen Deco 03](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1365) (Missing identifier)
+- [x] XP-Pen Deco Fun CT430
+- [x] XP-Pen Deco Fun CT640
+- [x] [XP-Pen Deco Fun CT1060](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1474/files)
+- [x] [XP-Pen Deco Mini 4](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1373)
+- [x] [XP-Pen Innovator 16](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1420)
+- [x] [XP-Pen Star 03](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1365) (Missing identifier)
+- [x] [XP-Pen Star 06](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1038) (Missing parser, change it to `OpenTabletDriver.Vendors.XP_Pen.XP_PenReportParser`)
+- [x] XP-Pen Star G430S V2
+- [x] XP-Pen Star G960S
 
 ## List of parsers Backported:
 
 - [x] VeikkReportParser (VeikkTabletReport)
 - [x] [WacomGraphire3ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1487) (IntuosLegacyTabletReport) (CTE-430)
 - [x] [WoodPadParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1450) (WoodPadReport) (Woodpad PF0730)
-- [ ] [XP_PenReportParserOverride](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1420) (XP_PenTabletOverflowReport) (XP-Pen Innovator 16)
+- [x] [XP_PenReportParserOverride](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1420) (XP_PenTabletOverflowReport) (XP-Pen Innovator 16)
 - [ ] [Intuos4ReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1064)
 (Intuos4AuxReport) (All PTK-X40 use it)
+- [ ] [XenceLabsReportParser](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1542) (XenceLabsTabletReport)
 
 # Note:
 
