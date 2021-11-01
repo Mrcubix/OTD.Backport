@@ -2,7 +2,7 @@
 
 This Plugin aim to backport Parsers and Configurations that are known working in 0.5.3.3
 
-## List of Tablet Configurations Changes Backported (48/50):
+## List of Tablet Configurations Changes Backported (50/50):
 
 - [x] Artisul M0610
 - [x] [Gaomon S630](https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1458) (non-WinUSB)
