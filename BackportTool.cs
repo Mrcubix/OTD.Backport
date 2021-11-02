@@ -75,9 +75,11 @@ namespace OTD.Backport
             }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                appdataFolder = Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".config/OpenTabletDriver");
-                rootFolder = "/usr/share/OpenTabletDriver/";
-                return true;
+                Log.Write("OTD.Backport", "Platform Detected: Linux", LogLevel.Error);
+                Log.Write("OTD.Backport", "Users don't have write access to /usr/share/OpenTabletDriver/ by default.", LogLevel.Error);
+                Log.Write("OTD.Backport", $"To fix it, run 'update.sh' located in '~/.config/OpenTabletDriver/Plugins/OTD.Backport/' OR get the release and run 'update.sh'", LogLevel.Error);
+                Log.Write("OTD.Backport", "Link to Release: https://github.com/Mrcubix/OTD.Backport/releases", LogLevel.Error);
+                return false;
             }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
