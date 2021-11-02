@@ -8,9 +8,9 @@
         "MaxY": 38709.0,
         "MaxPressure": 8191,
         "ActiveReportID": {
-          "Start": 80,
-          "StartInclusive": true,
-          "End": 96,
+          "Start": null,
+          "StartInclusive": false,
+          "End": null,
           "EndInclusive": false
         },
         "VendorID": 10429,

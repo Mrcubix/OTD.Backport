@@ -1,29 +1,23 @@
 {
   "Name": "VEIKK VK640",
-  "Specifications": {
-    "Digitizer": {
+  "DigitizerIdentifiers": [
+	{
       "Width": 152.4,
       "Height": 101.6,
       "MaxX": 30480.0,
-      "MaxY": 20320.0
-    },
-    "Pen": {
+      "MaxY": 20320.0,
       "MaxPressure": 8191,
-      "Buttons": {
-        "ButtonCount": 2
-      }
-    },
-    "AuxiliaryButtons": null,
-    "MouseButtons": null,
-    "Touch": null
-  },
-  "DigitizerIdentifiers": [
-    {
+      "ActiveReportID": {
+        "Start": null,
+        "StartInclusive": false,
+        "End": null,
+        "EndInclusive": false
+      },
       "VendorID": 12267,
       "ProductID": 5,
       "InputReportLength": 13,
       "OutputReportLength": 9,
-      "ReportParser": "OpenTabletDriver.Vendors.Veikk.VeikkReportParser",
+      "ReportParser": "OTD.BackPort.Vendors.Veikk.VeikkReportParser",
       "FeatureInitReport": null,
       "OutputInitReport": "CQEE",
       "DeviceStrings": {},
