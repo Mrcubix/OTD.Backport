@@ -19,9 +19,7 @@
         "OutputReportLength": 10,
         "ReportParser": "OpenTabletDriver.Vendors.XP_Pen.XP_PenTiltReportParser",
         "FeatureInitReport": null,
-        "OutputInitReport": [
-            "ArAE"
-        ],
+        "OutputInitReport": "ArAE",
         "DeviceStrings": {
             "4": "UG902_BPG1006"
         },
