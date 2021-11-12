@@ -18,6 +18,7 @@ namespace OTD.Backport.Vendors.XP_Pen
                 report[2].IsBitSet(5),
                 report[2].IsBitSet(6),
                 report[2].IsBitSet(7),
+                report[3].IsBitSet(0)
             };
         }
 

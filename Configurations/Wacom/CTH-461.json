@@ -17,7 +17,7 @@
       "ProductID": 210,
       "InputReportLength": 9,
       "OutputReportLength": null,
-      "ReportParser": "OpenTabletDriver.Tablet.TabletReportParser",
+      "ReportParser": "OTD.Backport.Vendors.Wacom.Intuos.IntuosReportParser",
       "FeatureInitReport": "AgI=",
       "OutputInitReport": null,
       "DeviceStrings": {},
@@ -39,8 +39,32 @@
       "ProductID": 210,
       "InputReportLength": 11,
       "OutputReportLength": null,
-      "ReportParser": "OpenTabletDriver.Vendors.SkipByteTabletReportParser",
+      "ReportParser": "OTD.Backport.Vendors.Wacom.Intuos.IntuosSkipByteReportParser",
       "FeatureInitReport": "AgI=",
+      "OutputInitReport": null,
+      "DeviceStrings": {},
+      "InitializationStrings": []
+    },
+    {
+      "Width": 147.2,
+      "Height": 92.0,
+      "MaxX": 14720.0,
+      "MaxY": 9200.0,
+      "MaxPressure": 1023,
+      "ActiveReportID": {
+        "Start": null,
+        "StartInclusive": false,
+        "End": null,
+        "EndInclusive": false
+      },
+      "VendorID": 1386,
+      "ProductID": 218,
+      "InputReportLength": 9,
+      "OutputReportLength": null,
+      "ReportParser": "OTD.Backport.Vendors.Wacom.Intuos.IntuosReportParser",
+      "FeatureInitReport": [
+        "AgI="
+      ],
       "OutputInitReport": null,
       "DeviceStrings": {},
       "InitializationStrings": []

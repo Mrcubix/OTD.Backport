@@ -17,7 +17,7 @@
       "ProductID": 1,
       "InputReportLength": 13,
       "OutputReportLength": 9,
-      "ReportParser": "OTD.BackPort.Vendors.Veikk.VeikkReportParser",
+      "ReportParser": "OTD.Backport.Vendors.Veikk.VeikkReportParser",
       "FeatureInitReport": null,
       "OutputInitReport": "CQEE",
       "DeviceStrings": {},
