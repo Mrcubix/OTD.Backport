@@ -10,7 +10,7 @@ namespace OTD.Backport.Vendors.XP_Pen
         {
             Raw = report;
 
-            ReportID = 0;
+            ReportID = report[1];
             Position = new Vector2
             {
                 X = Unsafe.ReadUnaligned<ushort>(ref report[2]) | report[10] << 16,
