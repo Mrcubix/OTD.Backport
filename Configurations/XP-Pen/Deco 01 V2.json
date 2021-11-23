@@ -4,13 +4,13 @@
     {
       "Width": 254.0,
       "Height": 158.75,
-      "MaxX": 25400.0,
-      "MaxY": 15875.0,
+      "MaxX": 50800.0,
+      "MaxY": 31750.0,
       "MaxPressure": 8191,
       "ActiveReportID": {
-        "Start": 80,
-        "StartInclusive": true,
-        "End": 96,
+        "Start": null,
+        "StartInclusive": false,
+        "End": null,
         "EndInclusive": false
       },
       "VendorID": 10429,
@@ -32,7 +32,7 @@
       "MaxY": 15875.0,
       "MaxPressure": 8191,
       "ActiveReportID": {
-        "Start": 64,
+        "Start": null,
         "StartInclusive": false,
         "End": null,
         "EndInclusive": false
@@ -54,9 +54,9 @@
       "MaxY": 15875.0,
       "MaxPressure": 8191,
       "ActiveReportID": {
-        "Start": 80,
-        "StartInclusive": true,
-        "End": 96,
+        "Start": null,
+        "StartInclusive": false,
+        "End": null,
         "EndInclusive": false
       },
       "VendorID": 10429,
