@@ -22,6 +22,28 @@
         "OutputInitReport": "ArAE",
         "DeviceStrings": {},
         "InitializationStrings": []
+      },
+	  {
+        "Width": 121.92,
+        "Height": 76.2,
+        "MaxX": 24384.0,
+        "MaxY": 15240.0,
+        "MaxPressure": 8191,
+        "ActiveReportID": {
+          "Start": 80,
+          "StartInclusive": true,
+          "End": 96,
+          "EndInclusive": false
+        },
+        "VendorID": 10429,
+        "ProductID": 2352,
+        "InputReportLength": 12,
+        "OutputReportLength": 21,
+        "ReportParser": "OpenTabletDriver.Vendors.XP_Pen.XP_PenReportParser",
+        "FeatureInitReport": null,
+        "OutputInitReport": "ArAE",
+        "DeviceStrings": {},
+        "InitializationStrings": []
       }
     ],
     "AuxilaryDeviceIdentifiers": [],
