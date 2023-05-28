@@ -1,0 +1,51 @@
+{
+  "Name": "Wacom DTC-133",
+  "DigitizerIdentifiers": [
+    {
+      "Width": 294.34,
+      "Height": 165.56,
+      "MaxX": 29434.0,
+      "MaxY": 16556.0,
+      "MaxPressure": 4095,
+      "ActiveReportID": {
+        "Start": null,
+        "StartInclusive": false,
+        "End": null,
+        "EndInclusive": false
+      },
+      "VendorID": 1386,
+      "ProductID": 934,
+      "InputReportLength": 192,
+      "OutputReportLength": null,
+      "ReportParser": "OpenTabletDriver.Vendors.Wacom.IntuosV3ReportParser",
+      "FeatureInitReport": "AgI=",
+      "OutputInitReport": null,
+      "DeviceStrings": {},
+      "InitializationStrings": []
+    },
+    {
+      "Width": 294.34,
+      "Height": 165.56,
+      "MaxX": 29434.0,
+      "MaxY": 16556.0,
+      "MaxPressure": 4095,
+      "ActiveReportID": {
+        "Start": null,
+        "StartInclusive": false,
+        "End": null,
+        "EndInclusive": false
+      },
+      "VendorID": 1386,
+      "ProductID": 934,
+      "InputReportLength": 193,
+      "OutputReportLength": null,
+      "ReportParser": "OpenTabletDriver.Vendors.Wacom.WacomDriverIntuosV3ReportParser",
+      "FeatureInitReport": "AgI=",
+      "OutputInitReport": null,
+      "DeviceStrings": {},
+      "InitializationStrings": []
+    }
+  ],
+  "AuxilaryDeviceIdentifiers": [],
+  "Attributes": {}
+}
