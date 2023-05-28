@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using OpenTabletDriver.Plugin;
@@ -11,8 +12,10 @@ namespace OTD.Backport
     [PluginName("OTD.Backport")]
     public class OTD_Backport : ITool
     {
-        private static string appdataFolder;
+        private static string assemblyLocation = Assembly.GetExecutingAssembly().Location;
+        private static string location = assemblyLocation.Substring(0, assemblyLocation.LastIndexOf(Path.DirectorySeparatorChar));
         private static string rootFolder;
+        private static string backportedConfigs = location + "/Configurations";
         private static string settingFile;
 
         public bool Initialize()
@@ -21,56 +24,49 @@ namespace OTD.Backport
             return true;
         }
 
+        public void Dispose() { }
+
         public void InitializeAsync()
         {
             if (!DetectPlatform()) return;
 
-            settingFile = Path.Combine(appdataFolder, "OTD.Backport.lock");
+            settingFile = Path.Combine(location, "OTD.Backport.lock");
 
-            if (forceApply || UpdateOnNextStart())
+            if (ShouldUpdate())
             {
-                // Moving &/OR overwriting configs
                 try
                 {
+                    // Moving &/OR overwriting configs
                     PlatformSpecificUpdate();
                     Log.Write("OTD.Backport", "Some Configs have been altered.", LogLevel.Warning);
                     Log.Write("OTD.Backport", "Go to Tablets > Detect tablet OR Restart OTD for changes to apply.", LogLevel.Warning);
                 }
-                catch(Exception) {}
+                catch (Exception) { }
 
-                if (forceApply)
+                if (forceInstall)
                 {
                     Log.Write("OTD.Backport", "Force Apply is enabled, don't forget to disable it in Tool > OTD.Backport by unticking 'Force Apply'", LogLevel.Warning);
                 }
 
             }
-	    }
+        }
 
-	    public void Dispose() {}
-
-        public bool UpdateOnNextStart()
+        public bool ShouldUpdate()
         {
             if (!File.Exists(settingFile))
             {
                 File.Create(settingFile);
                 return true;
             }
-            return false;
+
+            return forceInstall;
         }
-        public bool DetectPlatform() 
+
+        public bool DetectPlatform()
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                if (Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "userdata")))
-                {
-                    appdataFolder = Path.Combine(Directory.GetCurrentDirectory(),"userdata");
-                }
-                else
-                {
-                    appdataFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%localappdata%"), "OpenTabletDriver");
-                }
                 rootFolder = Directory.GetCurrentDirectory();
-
                 return true;
             }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
@@ -83,8 +79,7 @@ namespace OTD.Backport
             }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                appdataFolder = Path.Combine(Environment.GetEnvironmentVariable("HOME"), "Library/Application Support/OpenTabletDriver");
-                rootFolder = appdataFolder;
+                rootFolder = Path.Combine(Environment.GetEnvironmentVariable("HOME"), "Library/Application Support/OpenTabletDriver");
                 return true;
             }
 
@@ -96,48 +91,27 @@ namespace OTD.Backport
 
         public void PlatformSpecificUpdate()
         {
-            string source = Path.Combine(Path.Combine(Path.Combine(appdataFolder, "Plugins"), "OTD.Backport"), "Configurations");
+            string source = backportedConfigs;
             string target = Path.Combine(rootFolder, "Configurations");
 
             if (Directory.Exists(source))
             {
                 // Backup Configurations   
                 string backupConfigs = Path.Combine(rootFolder, "Configurations.backup");
-                try
-                {
+
+                // Check if backup folder exists
+                if (!Directory.Exists(backupConfigs))
                     Directory.CreateDirectory(backupConfigs);
-                    MergeConfigs(target, backupConfigs);
-                }
-                catch(UnauthorizedAccessException e)
-                {
-                    Log.Write("OTD.Backport", "An exception occured while backing up Configurations: Permission Denied.", LogLevel.Fatal);
-                    Log.Write("OTD.Backport", "This exception can be encountered if you don't have permission to read from the plugin folder OR/AND write or create file/folder in:", LogLevel.Fatal);
-                    Log.Write("OTD.Backport", backupConfigs, LogLevel.Fatal);
-                    Log.Write("OTD.Backport", e.ToString(), LogLevel.Fatal);
-                }
-                catch(Exception e)
-                {
-                    Log.Write("OTD.Backport", "An unhandled exception occured while backing up Configurations: ", LogLevel.Fatal);
-                    Log.Write("OTD.Backport", e.ToString(), LogLevel.Fatal);
-                }
+
+                // Move Configurations
+                if (!MoveConfigurations(target, backupConfigs))
+                    return;
+
+                Log.Write("OTD.Backport", "Configurations have been backed up.", LogLevel.Info);
 
                 // Update Configurations
-                try
-                {
-                    MergeConfigs(source, target);
-                }
-                catch(UnauthorizedAccessException e)
-                {
-                    Log.Write("OTD.Backport", "An exception occured while updating Configurations: Permission Denied.", LogLevel.Fatal);
-                    Log.Write("OTD.Backport", "This exception can be encountered if you don't have permission to read from the plugin folder OR/AND write or create file/folder in:", LogLevel.Fatal);
-                    Log.Write("OTD.Backport", target, LogLevel.Fatal);
-                    Log.Write("OTD.Backport", e.ToString(), LogLevel.Fatal);
-                }
-                catch(Exception e)
-                {
-                    Log.Write("OTD.Backport", "An unhandled exception occured while updating Configurations: ", LogLevel.Fatal);
-                    Log.Write("OTD.Backport", e.ToString(), LogLevel.Fatal);
-                }
+                if (!MoveConfigurations(source, target))
+                    return;
             }
             else
             {
@@ -145,6 +119,29 @@ namespace OTD.Backport
                 Log.Write("OTD.Backport", "Re-install the plugin to recover the missing folder or extract the Configurations folder manually.", LogLevel.Error);
                 Log.Write("OTD.Backport", "Link to Release: https://github.com/Mrcubix/OTD.Backport/releases", LogLevel.Error);
             }
+        }
+
+        public bool MoveConfigurations(string source, string target)
+        {
+            try
+            {
+                MergeConfigs(source, target);
+                return true;
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                Log.Write("OTD.Backport", "An exception occured while backing up Configurations: Permission Denied.", LogLevel.Fatal);
+                Log.Write("OTD.Backport", "This exception can be encountered if you don't have permission to read from the plugin folder OR/AND write or create file/folder in:", LogLevel.Fatal);
+                Log.Write("OTD.Backport", target, LogLevel.Fatal);
+                Log.Write("OTD.Backport", e.ToString(), LogLevel.Fatal);
+            }
+            catch (Exception e)
+            {
+                Log.Write("OTD.Backport", "An unhandled exception occured while backing up Configurations: ", LogLevel.Fatal);
+                Log.Write("OTD.Backport", e.ToString(), LogLevel.Fatal);
+            }
+
+            return false;
         }
 
         public void MergeConfigs(string source, string target)
@@ -161,7 +158,7 @@ namespace OTD.Backport
                 }
 
                 FileInfo[] files = new DirectoryInfo(sourceVendorDirectory).GetFiles();
-                foreach(FileInfo file in files)
+                foreach (FileInfo file in files)
                 {
                     byte[] data = File.ReadAllBytes(file.FullName);
                     File.WriteAllBytes(Path.Combine(targetVendorDirectory, file.Name), data);
@@ -169,12 +166,12 @@ namespace OTD.Backport
             }
         }
 
-        [BooleanProperty("Force Apply", ""),
+        [BooleanProperty("Force Install", ""),
          DefaultPropertyValue(false),
          ToolTip("OTD.Backport:\n\n" +
                  "When enabled, Configs will be overwritten on Apply & Save.\n\n" +
                  "Don't forget to disable it after updating configurations.")
         ]
-        public bool forceApply { set; get; }
+        public bool forceInstall { set; get; }
     }
 }

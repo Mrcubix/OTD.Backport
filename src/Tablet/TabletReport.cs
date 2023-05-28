@@ -19,8 +19,8 @@ namespace OTD.Backport.Tablet
             Pressure = BitConverter.ToUInt16(report, 6);
             PenButtons = new bool[]
             {
-                (report[1] & (1 << 1)) != 0,
-                (report[1] & (1 << 2)) != 0
+                report[1].IsBitSet(1),
+                report[1].IsBitSet(2)
             };
         }
 

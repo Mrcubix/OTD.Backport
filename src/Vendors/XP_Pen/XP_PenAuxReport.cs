@@ -4,7 +4,7 @@ namespace OTD.Backport.Vendors.XP_Pen
 {
     public struct XP_PenAuxReport : IAuxReport
     {
-        public XP_PenAuxReport(byte[] report)
+        public XP_PenAuxReport(byte[] report, int index = 2)
         {
             Raw = report;
 
