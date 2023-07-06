@@ -23,7 +23,7 @@ namespace OTD.Backport.Vendors.Wacom.Intuos4
             };
 
             // Wheel value is between 0x80 and 0xC7, check if value is above or equal to 0x80 using bitwise operator and subtract 0x80 if true
-            Wheel = (report[2] & 0x80) == 0 ? 0 : report[2] - 0x80;
+            Wheel = report[1] > 0x79 ? report[1] - 0x80 : -1;
         }
 
         public bool[] AuxButtons { set; get; }
