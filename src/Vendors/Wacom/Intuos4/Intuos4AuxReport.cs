@@ -22,8 +22,8 @@ namespace OTD.Backport.Vendors.Wacom.Intuos4
                 report[3].IsBitSet(7),
             };
 
-            // Wheel value is between 0x80 and 0xC7, last bit is used for pressure
-            Wheel = report[1] - 0x80;
+            // Wheel value is between 0x80 and 0xC7, check if value is above or equal to 0x80 using bitwise operator and subtract 0x80 if true
+            Wheel = (report[2] & 0x80) == 0 ? 0 : report[2] - 0x80;
         }
 
         public bool[] AuxButtons { set; get; }
