@@ -12,10 +12,10 @@ namespace OTD.Backport
     [PluginName("OTD.Backport")]
     public class OTD_Backport : ITool
     {
-        private static string assemblyLocation = Assembly.GetExecutingAssembly().Location;
-        private static string location = assemblyLocation.Substring(0, assemblyLocation.LastIndexOf(Path.DirectorySeparatorChar));
+        private readonly static string assemblyLocation = Assembly.GetExecutingAssembly().Location;
+        private readonly static string location = assemblyLocation.Substring(0, assemblyLocation.LastIndexOf(Path.DirectorySeparatorChar));
         private static string rootFolder;
-        private static string backportedConfigs = location + "/Configurations";
+        private readonly static string backportedConfigs = location + "/Configurations";
         private static string settingFile;
 
         public bool Initialize()
@@ -43,7 +43,7 @@ namespace OTD.Backport
                 }
                 catch (Exception) { }
 
-                if (forceInstall)
+                if (ForceInstall)
                 {
                     Log.Write("OTD.Backport", "Force Apply is enabled, don't forget to disable it in Tool > OTD.Backport by unticking 'Force Apply'", LogLevel.Warning);
                 }
@@ -59,7 +59,7 @@ namespace OTD.Backport
                 return true;
             }
 
-            return forceInstall;
+            return ForceInstall;
         }
 
         public bool DetectPlatform()
@@ -174,6 +174,6 @@ namespace OTD.Backport
                  "When enabled, Configs will be overwritten on Apply & Save.\n\n" +
                  "Don't forget to disable it after updating configurations.")
         ]
-        public bool forceInstall { set; get; }
+        public bool ForceInstall { set; get; }
     }
 }

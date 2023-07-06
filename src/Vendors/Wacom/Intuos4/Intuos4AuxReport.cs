@@ -22,7 +22,8 @@ namespace OTD.Backport.Vendors.Wacom.Intuos4
                 report[3].IsBitSet(7),
             };
 
-            Wheel = report[1];
+            // Wheel value is between 0x80 and 0xC7, last bit is used for pressure
+            Wheel = report[1] - 0x80;
         }
 
         public bool[] AuxButtons { set; get; }
