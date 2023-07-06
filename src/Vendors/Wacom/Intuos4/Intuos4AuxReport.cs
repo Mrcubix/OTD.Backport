@@ -1,8 +1,10 @@
+using OpenTabletDriver.Plugin;
 using OpenTabletDriver.Plugin.Tablet;
+using OTD.Backport.Tablet;
 
 namespace OTD.Backport.Vendors.Wacom.Intuos4
 {
-    public struct Intuos4AuxReport : IAuxReport
+    public struct Intuos4AuxReport : IAuxReport, IWheelReport
     {
         public Intuos4AuxReport(byte[] report)
         {
@@ -20,11 +22,11 @@ namespace OTD.Backport.Vendors.Wacom.Intuos4
                 report[3].IsBitSet(7),
             };
 
-            AuxWheel = report[1];
+            Wheel = report[1];
         }
 
         public bool[] AuxButtons { set; get; }
-        public int AuxWheel { set; get; }
+        public int Wheel { set; get; }
         public byte[] Raw { set; get; }
     }
 }

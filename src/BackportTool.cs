@@ -99,6 +99,8 @@ namespace OTD.Backport
                 // Backup Configurations   
                 string backupConfigs = Path.Combine(rootFolder, "Configurations.backup");
 
+                Log.Write("OTD.Backport", $"Backing up Configurations to {backupConfigs}", LogLevel.Info);
+
                 // Check if backup folder exists
                 if (!Directory.Exists(backupConfigs))
                     Directory.CreateDirectory(backupConfigs);
