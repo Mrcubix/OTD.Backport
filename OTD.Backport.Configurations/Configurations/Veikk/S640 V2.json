@@ -1,0 +1,31 @@
+{
+  "Name": "VEIKK S640 V2",
+  "DigitizerIdentifiers": [
+	{
+      "Width": 152.4,
+      "Height": 101.6,
+      "MaxX": 30480.0,
+      "MaxY": 20320.0,
+      "MaxPressure": 8191,
+      "ActiveReportID": {
+        "Start": null,
+        "StartInclusive": false,
+        "End": null,
+        "EndInclusive": false
+      },
+      "VendorID": 12267,
+      "ProductID": 1,
+      "InputReportLength": 13,
+      "OutputReportLength": 9,
+      "ReportParser": "OTD.Backport.Parsers.Vendors.Veikk.VeikkReportParser",
+      "FeatureInitReport": null,
+      "OutputInitReport": "CQEE",
+      "DeviceStrings": {},
+      "InitializationStrings": []
+    }
+  ],
+  "AuxilaryDeviceIdentifiers": [],
+  "Attributes": {
+    "libinputoverride": "1"
+  }
+}

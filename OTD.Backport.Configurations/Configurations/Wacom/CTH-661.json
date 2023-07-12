@@ -1,0 +1,63 @@
+{
+  "Name": "Wacom CTH-661",
+  "DigitizerIdentifiers": [
+    {
+      "Width": 216.48,
+      "Height": 137.0,
+      "MaxX": 21648.0,
+      "MaxY": 13700.0,
+      "MaxPressure": 1023,
+      "ActiveReportID": {
+        "Start": null,
+        "StartInclusive": false,
+        "End": null,
+        "EndInclusive": false
+      },
+      "VendorID": 1386,
+      "ProductID": 211,
+      "InputReportLength": 9,
+      "OutputReportLength": null,
+      "ReportParser": "OTD.Backport.Parsers.Vendors.Wacom.Intuos.IntuosReportParser",
+      "FeatureInitReport": "AgI=",
+      "OutputInitReport": null,
+      "DeviceStrings": {},
+      "InitializationStrings": []
+    },
+    {
+      "Width": 147.2,
+      "Height": 92.0,
+      "MaxX": 14720.0,
+      "MaxY": 9200.0,
+      "MaxPressure": 1023,
+      "ActiveReportID": {
+        "Start": 64,
+        "StartInclusive": false,
+        "End": null,
+        "EndInclusive": false
+      },
+      "VendorID": 1386,
+      "ProductID": 223,
+      "InputReportLength": 10,
+      "OutputReportLength": null,
+      "ReportParser": "OTD.Backport.Parsers.Vendors.Wacom.Intuos.IntuosSkipByteReportParser",
+      "FeatureInitReport": "AgI=",
+      "OutputInitReport": null,
+      "DeviceStrings": {},
+      "InitializationStrings": []
+    }
+  ],
+  "AuxilaryDeviceIdentifiers": [
+    {
+      "VendorID": 1386,
+      "ProductID": 223,
+      "InputReportLength": 20,
+      "OutputReportLength": null,
+      "ReportParser": "OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser",
+      "FeatureInitReport": null,
+      "OutputInitReport": null,
+      "DeviceStrings": {},
+      "InitializationStrings": []
+    }
+  ],
+  "Attributes": {}
+}
