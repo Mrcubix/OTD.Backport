@@ -11,4 +11,4 @@ move /Y temp\OTD.Backport.pdb build\OTD.Backport.Configurations.pdb
 
 del /Q temp
 
-robocopy Configurations build/Configurations /E /NFL /NDL /NJH /NJS /NC /NS
+robocopy OTD.Backport.Configurations/Configurations build/Configurations /E /NFL /NDL /NJH /NJS /NC /NS

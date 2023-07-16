@@ -1,11 +1,11 @@
 {
-  "Name": "Wacom PTH-451",
+  "Name": "Wacom PTH-650",
   "DigitizerIdentifiers": [
     {
-      "Width": 157.48,
-      "Height": 98.425,
-      "MaxX": 31496.0,
-      "MaxY": 19685.0,
+      "Width": 223.52,
+      "Height": 139.7,
+      "MaxX": 44704.0,
+      "MaxY": 27940.0,
       "MaxPressure": 2047,
       "ActiveReportID": {
         "Start": 0,
@@ -14,7 +14,7 @@
         "EndInclusive": false
       },
       "VendorID": 1386,
-      "ProductID": 788,
+      "ProductID": 39,
       "InputReportLength": 10,
       "OutputReportLength": null,
       "ReportParser": "OTD.Backport.Parsers.Vendors.Wacom.Intuos1.Intuos1ReportParser",
@@ -24,10 +24,10 @@
       "InitializationStrings": []
     },
     {
-      "Width": 157.48,
-      "Height": 98.425,
-      "MaxX": 31496.0,
-      "MaxY": 19685.0,
+      "Width": 223.52,
+      "Height": 139.7,
+      "MaxX": 44704.0,
+      "MaxY": 27940.0,
       "MaxPressure": 2047,
       "ActiveReportID": {
         "Start": 0,
@@ -36,7 +36,7 @@
         "EndInclusive": false
       },
       "VendorID": 1386,
-      "ProductID": 788,
+      "ProductID": 39,
       "InputReportLength": 11,
       "OutputReportLength": null,
       "ReportParser": "OTD.Backport.Parsers.Vendors.Wacom.Intuos1.Intuos1SkipByteReportParser",
@@ -49,7 +49,7 @@
   "AuxilaryDeviceIdentifiers": [
     {
       "VendorID": 1386,
-      "ProductID": 788,
+      "ProductID": 39,
       "InputReportLength": 64,
       "OutputReportLength": null,
       "ReportParser": "OpenTabletDriver.Vendors.Wacom.Wacom64bAuxReportParser",
