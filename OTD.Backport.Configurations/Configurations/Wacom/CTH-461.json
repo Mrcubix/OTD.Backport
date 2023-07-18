@@ -62,9 +62,7 @@
       "InputReportLength": 9,
       "OutputReportLength": null,
       "ReportParser": "OTD.Backport.Parsers.Vendors.Wacom.Intuos.IntuosReportParser",
-      "FeatureInitReport": [
-        "AgI="
-      ],
+      "FeatureInitReport": "AgI=",
       "OutputInitReport": null,
       "DeviceStrings": {},
       "InitializationStrings": []
